@@ -1,0 +1,20 @@
+<h1>Danh sách sản phẩm</h1>
+<a routerLink="/product/create">Tạo mới sản phẩm</a>
+<table>
+  <tr>
+    <td>STT</td>
+    <td>Tên sản phẩm</td>
+    <td>Giá</td>
+    <td>Mô tả</td>
+    <td>Hành động</td>
+    <td colspan="2"></td>
+  </tr>
+  <tr *ngFor="let product of products; index as i">
+    <td>{{i + 1}}</td>
+    <a [routerLink]="['/product/view',product.id]"> <td>{{product.title}}</td></a>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <td><a [routerLink]="['/product/edit',product.id]">Sửa</a></td>
+    <td><a [routerLink]="['/product/delete',product.id]">Xoá</a></td>
+  </tr>
+</table>

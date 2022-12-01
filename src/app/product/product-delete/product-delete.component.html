@@ -1,0 +1,30 @@
+<form [formGroup]="productForm" (ngSubmit)="deleteProduct()">
+  <div class="font-group">
+    <input hidden class="form-control" formControlName="id"
+           id="id" placeholder="title">
+  </div>
+  <div >
+    <label>Tên</label>
+  </div>
+  <div class="font-group">
+    <input type="text" class="form-control" formControlName="title"
+           id="title" placeholder="title">
+  </div>
+  <div>
+    <label>Giá</label>
+  </div>
+  <div class="font-group">
+    <input type="text" class="form-control" formControlName="price"
+           id="price" placeholder="Price">
+  </div>
+  <div class="text-left">
+    <label>Mô tả</label>
+  </div>
+  <div class="font-group">
+    <input type="text" class="form-control" formControlName="description"
+           id="description" placeholder="Description">
+  </div>
+  <button style="margin-left: 160px;background-color: green" class="col-lg-3">Xoá</button>
+  <button routerLink="/product/list" style="margin-left: 20px;background-color: #182aec;color: white" class="col-lg-3">Quay lại</button>
+</form>
+
